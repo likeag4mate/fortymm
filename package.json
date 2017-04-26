@@ -1,0 +1,23 @@
+{
+  "name": "fortymm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "lite-server --baseDir='./src'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mightymoose/fortymm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mightymoose/fortymm/issues"
+  },
+  "homepage": "https://github.com/mightymoose/fortymm#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
