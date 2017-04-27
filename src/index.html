@@ -1,7 +1,57 @@
 <html>
     <head>
+      <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+      <link rel="stylesheet" href="player-ratings-search.css">
     </head>
     <body>
-      FortyMM!
+      <div class="title">
+        <img
+        src="nittaku-3-star-premium-40-plastic-table-tennis-balls_4.jpg"
+        alt="pingPongBall"
+        style="width:100px;height:100px;" 
+        align="middle">
+        </img>
+        <h1>FortyMM</h1>
+      </div>
+      <div class="mainArea">
+        <div classes="searches">
+        <div class="inputName">
+          <input type="text" id="search" name= "text_name" class="nameBox" placeholder="Enter Player Name">
+          <button type="searchName">Search</button>
+        </div>
+        <div id="results"></div>
+        <div class="advancedSearch">
+            <h2>Advanced Search</h2>
+            <ul>
+            <li><a href="#"><input type="citySearch" id="citySearch" name= "text_name" class="nameBox" placeholder="City"></a></li>
+            <li><a href="#"><input type="stateSearch" id="stateSearch" name= "text_name" class="nameBox" placeholder="State"></a></li>
+            <li><a href="#"><input type="ratingSearch1" id="ratingSearch1" name= "text_name" class="nameBox" placeholder="Min Rating"> to <input type="ratingSearch2" id="ratingSearch2" name= "text_name" class="nameBox" placeholder="Max Rating"></a></li>
+            </ul>
+            <button type="searchadvancedSearch">Search</button>
+          </div>
+        </div>
+        <div class="playerRatingList">
+          <div class="playerList">
+            <h2>Player</h2>
+            <ul>
+            <li><a href="#">Quinn Baker</a></li>
+            <li><a href="#">Mighty Moose</a></li>
+            <li><a href="#">Brian Bae</a></li>
+            <li><a href="#">Dimitrij Ovtcharov</a></li>
+            <li><a href="#">Kenta Matsudaira</a></li>
+            </ul>
+          </div>
+          <div class="ratingList">
+            <h2>Rating</h2>
+            <ul>
+            <li><a href="#">1777</a></li>
+            <li><a href="#">1234</a></li>
+            <li><a href="#">1738</a></li>
+            <li><a href="#">2799</a></li>
+            <li><a href="#">2801</a></li>
+          </div>
+        </div>
+      </div>
     </body>
+  <script src=""></script>
 </html>

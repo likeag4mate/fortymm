@@ -1,0 +1,48 @@
+body {
+    background: lightskyblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    max-block-size: 50em;
+    max-height: 4.6em;
+    display: flex;
+    flex-direction: row;
+    font-family: Monoton;
+    font-size: 1.7em;
+    text-align: left;
+    background-color: white;
+    color: black;
+    border: .2em solid black;
+}
+searchName {
+   height:3em;
+}
+.mainArea {
+   display: flex;
+   flex-direction: row; 
+   justify-content:space-between;
+}
+.playerList {
+    line-height: 30px;
+}
+.ratingList {
+    line-height: 30px
+}
+.playerRatingList {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    background-color: beige;
+    border: .3em outset gray
+}
+.advancedSearch {
+    font-size: .7em;
+}
+input[type=ratingSearch1] {
+    width: 6em;
+}
+input[type=ratingSearch2] {
+    width: 6em;
+}
