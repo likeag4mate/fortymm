@@ -5,12 +5,14 @@ body {
 }
 
 .title {
-    max-block-size: 50em;
-    max-height: 4.6em;
+    max-width: 30em;
+    min-width: 30em;
+    max-height: 4.3em;
+    min-height: 4.3em;
     display: flex;
     flex-direction: row;
     font-family: Monoton;
-    font-size: 1.7em;
+    font-size: 2em;
     text-align: left;
     background-color: white;
     color: black;
@@ -26,23 +28,52 @@ searchName {
 }
 .playerList {
     line-height: 30px;
+    font-size: 1.4em;
 }
 .ratingList {
-    line-height: 30px
+    line-height: 30px;
+    font-size: 1.4em;
 }
 .playerRatingList {
     display: flex;
     flex-direction: row;
     justify-content:flex-end;
+    justify-content: space-around;
     background-color: beige;
-    border: .3em outset gray
+    border: .3em outset gray;
+    min-width: 22em;
+    max-width: 35em;
 }
 .advancedSearch {
     font-size: .7em;
+    background-color: peachpuff;
+    border: .3em inset silver
 }
 input[type=ratingSearch1] {
     width: 6em;
 }
 input[type=ratingSearch2] {
     width: 6em;
+}
+
+input[type=mainSearch] {
+    width: 18em;
+    height: 2.5em;
+}
+
+.inputName {
+    background-color: salmon;
+    width: 17em;
+    height: 5em;
+    border: .3em inset silver
+}
+
+h4 {
+    font-family:
+}
+
+h5 {
+    font-family: keania one;
+    /*YOU HAVE TO ADD ANOTHER LINK FOR H5 TO GOOGLEFONTS.COM
+    */
 }
