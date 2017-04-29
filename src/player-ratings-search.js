@@ -3,75 +3,26 @@
  * 2) Build html to display the list of users
  * 3) Append the html from step 2 to the results div
  */
-
-var playerArray = ["Quinn Baker", "Mighy Moose", "Brian Bae", "Kenta Matusdaira", "Dimitrij Ovtcharov"];
-var ratingArray = ["1777", "1234", "2000", "2801", "2799"];
-for(var i = 0; i < playerArray.length; i++) {
-    var node = document.createElement("li"); 
-    var textnode = document.createTextNode(search);
-    node.appendChild(textnode); 
-    document.getElementById("playerArray").appendChild(node);
-}
-
-for(var i = 0; i < ratingArray.length; i++) {
-    var node = document.createElement("li"); 
-    var textnode = document.createTextNode(search);
-    node.appendChild(textnode); 
-    document.getElementById("ratingArray").appendChild(node);
-}
-
-var results = document.querySelector('#results');
 var search = document.querySelector('#search');
 
-var user = {id: 1, firstName: "firstName", lastName: "lastName"};
-var userDiv = document.createElement('div');
-userDiv.innerHTML = user.firstName
-
-// Append stuff to results list
-results.appendChild(userDiv);
-
-// Get players from the server
-fetch('player-ratings.json').then(function(results){
-    results.json().then(function(users) {
-        fetch(JSON.stringify(users));
-    });
-});
-
-// React to input changes
-mainSearch.addEventListener('keyup', function() {
+search.addEventListener('keyup', function() {
     fetch('player-ratings.json').then(function(results){
         results.json().then(function(users) {
-            fetch(JSON.stringify(users));
+            document.getElementById("players").innerText = "";
+            for(var i = 0; i < users.length; i++) {
+                var node = document.createElement("li");
+                node.innerText = users[i].firstName + ' ' + users[i].lastName;
+                document.getElementById("players").appendChild(node);
+            }
+
+            document.getElementById("ratings").innerText = "";
+            for(var i = 0; i < users.length; i++) {
+                var node = document.createElement("li");
+                node.innerText = users[i].rating;
+                document.getElementById("ratings").appendChild(node);
+            }
         });
     });
-
-
-citySearch.addEventListener('keyup', function() {
-    fetch('player-ratings.json').then(function(results){
-        results.json().then(function(users) {
-            fetch(JSON.stringify(users));
-        });
-});
-
-stateSearch.addEventListener('keyup', function() {
-    fetch('player-ratings.json').then(function(results){
-        results.json().then(function(users) {
-            fetch(JSON.stringify(users));
-        });
-});
-
-ratingSearch1.addEventListener('keyup', function() {
-    fetch('player-ratings.json').then(function(results){
-       results.json().then(function(users) {
-            fetch(JSON.stringify(users));
-        });
-});
-
-ratingSearch2.addEventListener('keyup', function() {
-    fetch('player-ratings.json').then(function(results){
-        results.json().then(function(users) {
-            fetch(JSON.stringify(users));
-        });
 });
 
 /*give player list and rating list ids
