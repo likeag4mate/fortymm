@@ -39,23 +39,39 @@ fetch('player-ratings.json').then(function(results){
 
 // React to input changes
 mainSearch.addEventListener('keyup', function() {
-    alert(search.value);
-});
+    fetch('player-ratings.json').then(function(results){
+        results.json().then(function(users) {
+            fetch(JSON.stringify(users));
+        });
+    });
+
 
 citySearch.addEventListener('keyup', function() {
-    fetch(search.value);
+    fetch('player-ratings.json').then(function(results){
+        results.json().then(function(users) {
+            fetch(JSON.stringify(users));
+        });
 });
 
 stateSearch.addEventListener('keyup', function() {
-    fetch(search.value);
+    fetch('player-ratings.json').then(function(results){
+        results.json().then(function(users) {
+            fetch(JSON.stringify(users));
+        });
 });
 
 ratingSearch1.addEventListener('keyup', function() {
-    fetch(search.value);
+    fetch('player-ratings.json').then(function(results){
+       results.json().then(function(users) {
+            fetch(JSON.stringify(users));
+        });
 });
 
 ratingSearch2.addEventListener('keyup', function() {
-    fetch(search.value);
+    fetch('player-ratings.json').then(function(results){
+        results.json().then(function(users) {
+            fetch(JSON.stringify(users));
+        });
 });
 
 /*give player list and rating list ids
